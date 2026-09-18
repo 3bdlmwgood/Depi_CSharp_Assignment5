@@ -219,6 +219,23 @@
             PrintFooter();
 
             #endregion
+
+
+            #region Q13
+
+            PrintHeader(13);
+
+            Console.WriteLine("IVehicle and Vehicle Added.");
+
+            /*
+             Interface inheritance allows us to combine multiple interfaces into one contract, 
+            so a class implementing the derived interface must implement all members of the inherited interfaces.
+             */
+
+            PrintFooter();
+
+            #endregion
+
         }
     }
 }
