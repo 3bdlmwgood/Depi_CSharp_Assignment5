@@ -245,7 +245,7 @@
 
             // shipp.MoveForward(); // Error
 
-            IMoveable shipRef = ship;
+            IMoveable shipRef = shipp;
 
             shipRef.MoveForward();
 
