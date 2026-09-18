@@ -81,6 +81,14 @@
             #endregion
 
 
+            #region Q5
+
+            Person p = new Person();
+
+            p.Greet();
+            p.Display();
+
+            #endregion
 
         }
     }
