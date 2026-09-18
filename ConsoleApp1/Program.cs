@@ -154,7 +154,16 @@
             #endregion
 
 
+            #region Q9
 
+            PrintHeader(9);
+
+            Console.WriteLine("The problem is that not every vehicle needs or supports the same methods. \n" +
+                "Interfaces solve this by allowing each class to implement only the behaviors it needs.");
+
+            PrintFooter();
+
+            #endregion
         }
     }
 }
