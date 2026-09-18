@@ -12,7 +12,13 @@
         {
             Console.WriteLine("\n-------------------------------------------------\n\n");
         }
-        
+
+        static void ProcessPerson(Person person)
+        {
+            person.Greet();
+            person.Display();
+        }
+
         static void Main(string[] args)
         {
             #region Q1
@@ -83,10 +89,14 @@
 
             #region Q5
 
+            PrintHeader(5);
+
             Person p = new Person();
 
             p.Greet();
             p.Display();
+
+            PrintFooter();
 
             #endregion
 
@@ -95,15 +105,43 @@
 
             PrintHeader(6);
 
-            Doctor d = new Doctor() { ID = 1 , Name = "Abdallah" , Age =21 , Specialty="---"};
+            Doctor d = new Doctor { ID = 1 , Name = "Abdallah" , Age =21 , Specialty="---"};
             d.Greet();
             d.Display();
 
-            Engineer e = new Engineer() { ID = 1 , Name = "Abdallah" , Age =21 , Field="---" , YearsOfExperience =2};
-            e.Display();
+            Engineer e = new Engineer { ID = 1 , Name = "Abdallah" , Age =21 , Field="---" , YearsOfExperience =2};
             e.Greet();
+            e.Display();
 
             PrintFooter();
+            #endregion
+
+
+            #region Q7
+
+            PrintHeader(7);
+
+            Person doctor = new Doctor {ID = 1 , Name = "Ahmed" ,Age = 25 , Specialty = "any" };
+            ProcessPerson( doctor );
+
+            Person engineer = new Engineer {ID = 1 , Name = "mohamed" ,Age = 22 , Field = "fssf" ,YearsOfExperience =2 };
+            ProcessPerson( engineer );
+
+            /*
+                Greet() prints the Person version in both cases
+                because Greet() is non-virtual and the derived
+                classes hide it using new.
+
+                The reference type is Person, so Person.Greet()
+                is called.
+
+                Display() is virtual in Person and overridden
+                in Doctor and Engineer, so the derived version
+                is called at runtime.
+            */
+
+            PrintFooter();
+
             #endregion
         }
     }
