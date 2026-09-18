@@ -185,6 +185,40 @@
             PrintFooter();
 
             #endregion
+
+
+            #region Q12
+
+            PrintHeader(12);
+
+            Car car = new Car();
+            car.MoveForward();
+            car.MoveBackward();
+
+            Ship ship = new Ship();
+            ship.MoveForward();
+            ship.MoveBackward();
+
+            Airplane airplane = new Airplane();
+            airplane.MoveForward();
+            airplane.MoveBackward();
+            airplane.MoveUp();
+            airplane.MoveDown();
+
+            IMoveable carRef = new Car();
+            carRef.MoveForward();
+            carRef.MoveBackward();
+
+            IMoveable planeRef = new Airplane();
+            planeRef.MoveForward();
+            planeRef.MoveBackward();
+
+            // We can't call MoveUp() or MoveDown() because they are not in IMoveable.
+            // We can call them if the reference type is IFlyable.
+
+            PrintFooter();
+
+            #endregion
         }
     }
 }
