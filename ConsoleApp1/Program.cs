@@ -2,27 +2,67 @@
 {
     internal class Program
     {
+        
+        static void PrintHeader(int QuestionNumber)
+        {
+            Console.WriteLine($"====================== Q{QuestionNumber} ======================\n");
+        }
+
+        static void PrintFooter()
+        {
+            Console.WriteLine("\n-------------------------------------------------\n\n");
+        }
+        
         static void Main(string[] args)
         {
             #region Q1
 
-            Shape shape = new Shape(3,5);
+            PrintHeader(1);
 
-            Console.WriteLine(shape);
-            Console.WriteLine($"Area = {shape.Area()}");
+            Shape s = new Shape(3,5);
+
+            Console.WriteLine(s);
+            Console.WriteLine($"Area = {s.Area()}");
+
+            PrintFooter();
 
             #endregion
 
 
             #region Q2
 
-            Cube cube = new Cube(2,3,4);
+            PrintHeader(2);
 
-            cube.Print();
-            Console.WriteLine($"Area =  {cube.Area()}");
+            Cube c = new Cube(2,3,4);
+
+            c.Print();
+            Console.WriteLine($"Area =  {c.Area()}");
+
+            PrintFooter();
 
             #endregion
 
+
+            #region Q3
+
+            PrintHeader(3);
+
+            Shape shape = new Shape(2, 3);
+            Console.WriteLine($"Area = {shape.Area()}");    // Prints 6 -- 2*3
+
+            Cube cube = new Cube(2, 3, 4);
+            Console.WriteLine($"Area = {cube.Area()}");    // Prints 24 -- 2*3*4
+
+
+            Shape shapeRef = new Cube(2, 3, 4);
+            Console.WriteLine($"Area = {shapeRef.Area()}");    // Prints 6 -- Because Area() is hidden using new and the reference type is Shape so Shape.Area() is called.
+
+
+
+
+            PrintFooter();
+
+            #endregion
 
 
         }
