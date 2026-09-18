@@ -143,6 +143,18 @@
             PrintFooter();
 
             #endregion
+
+
+            #region Q8
+
+            PrintHeader(8);
+            Console.WriteLine("causes a compiler error.This happens because a method must be virtual, abstract, " +
+                "\nor override in the base class before a derived class can override it.");
+            PrintFooter();
+            #endregion
+
+
+
         }
     }
 }
