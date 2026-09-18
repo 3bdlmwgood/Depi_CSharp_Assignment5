@@ -196,7 +196,7 @@
             car.MoveBackward();
 
             Ship ship = new Ship();
-            ship.MoveForward();
+            //ship.MoveForward();     //Error After Make Q14
             ship.MoveBackward();
 
             Airplane airplane = new Airplane();
@@ -235,6 +235,25 @@
             PrintFooter();
 
             #endregion
+
+
+            #region Q14
+
+            PrintHeader(14);
+
+            Ship shipp = new Ship();
+
+            // shipp.MoveForward(); // Error
+
+            IMoveable shipRef = ship;
+
+            shipRef.MoveForward();
+
+            PrintFooter();
+
+            #endregion
+
+
 
         }
     }

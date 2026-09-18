@@ -6,7 +6,7 @@ namespace ConsoleApp1
 {
     internal class Ship:IMoveable
     {
-        public void MoveForward()
+        void IMoveable.MoveForward()
         {
             Console.WriteLine("Ship moves forward.");
         }
