@@ -164,6 +164,19 @@
             PrintFooter();
 
             #endregion
+
+
+            #region Q10
+
+            PrintHeader(10);
+
+            Console.WriteLine("Imovable and IFlyable Added.");
+            
+            PrintFooter();
+            #endregion
+
+
+
         }
     }
 }
