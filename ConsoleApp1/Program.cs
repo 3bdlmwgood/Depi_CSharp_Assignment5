@@ -58,11 +58,28 @@
             Console.WriteLine($"Area = {shapeRef.Area()}");    // Prints 6 -- Because Area() is hidden using new and the reference type is Shape so Shape.Area() is called.
 
 
+            PrintFooter();
 
+            #endregion
+
+
+            #region Q4
+
+            PrintHeader(4);
+
+            object obj = new Cube(1,2,3);
+
+            Console.WriteLine( obj.ToString());
+
+
+            /* Prints Shape.ToString() Because ToString() is virtual in object and Shape overrides it. 
+             * The actual object is Cube, so the overridden method is resolved at runtime.
+            */
 
             PrintFooter();
 
             #endregion
+
 
 
         }
