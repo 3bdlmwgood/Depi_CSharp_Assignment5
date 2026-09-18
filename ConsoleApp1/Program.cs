@@ -254,13 +254,27 @@
             #endregion
 
 
-
             #region Q15
 
             PrintHeader(15);
 
-            Console.WriteLine("Static Binding (new): Base = Normal Method, Derived = new, Binding Time = Compile Time, \n\tDepends on = Reference Type, Base Reference = Call Base Method");
-            Console.WriteLine("Dynamic Binding (override): Base = virtual, Derived = override, Binding Time = Runtime, \n\tDepends on = Object Type, Base Reference = Call Derived Method");
+            Console.WriteLine("Static Binding (new): Base = Normal Method, Derived = new, Binding Time = Compile Time, " +
+                "\n\tDepends on = Reference Type, Base Reference = Call Base Method");
+            Console.WriteLine("Dynamic Binding (override): Base = virtual, Derived = override, Binding Time = Runtime, " +
+                "\n\tDepends on = Object Type, Base Reference = Call Derived Method");
+
+            PrintFooter();
+
+            #endregion
+
+
+            #region Q16
+
+            PrintHeader(16);
+
+            Console.WriteLine("Override requires Base Method to be virtual, abstract, or override, " +
+                "\nbecause Override supports Runtime Polymorphism, while new only hides the Base Method");
+
             PrintFooter();
 
             #endregion
