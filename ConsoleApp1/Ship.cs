@@ -4,16 +4,16 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    internal class Car : IMoveable
+    internal class Ship:IMoveable
     {
         public void MoveForward()
         {
-            Console.WriteLine("Car moves forward.");
+            Console.WriteLine("Ship moves forward.");
         }
 
         public void MoveBackward()
         {
-            Console.WriteLine("Car moves backward.");
+            Console.WriteLine("Ship moves backward.");
         }
     }
 }
