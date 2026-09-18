@@ -90,6 +90,21 @@
 
             #endregion
 
+
+            #region Q6
+
+            PrintHeader(6);
+
+            Doctor d = new Doctor() { ID = 1 , Name = "Abdallah" , Age =21 , Specialty="---"};
+            d.Greet();
+            d.Display();
+
+            Engineer e = new Engineer() { ID = 1 , Name = "Abdallah" , Age =21 , Field="---" , YearsOfExperience =2};
+            e.Display();
+            e.Greet();
+
+            PrintFooter();
+            #endregion
         }
     }
 }
